@@ -30,7 +30,7 @@ class LavalinkBootstrap:
         
         # NOTE: Right now, the stable build is kinda screwed, so we'll use the dev build for now
         USE_DEV = True
-        self.download_command = f"curl -L https://ci.fredboat.com/repository/download/Lavalink_Build/8110:id/Lavalink.jar?guest=1 -O" if USE_DEV else f"curl -L https://github.com/Frederikam/Lavalink/releases/download/{self._version_number}/Lavalink.jar -O"
+        self.download_command = f"curl -L https://ci.fredboat.com/repository/download/Lavalink_Build/8110:id/Lavalink.jar?guest=1 -o Lavalink.jar" if USE_DEV else f"curl -L https://github.com/Frederikam/Lavalink/releases/download/{self._version_number}/Lavalink.jar -O"
         print(f"Download command: {self.download_command}")
 
         
